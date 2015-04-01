@@ -1,0 +1,1 @@
+docker run -v `pwd`/qrencodebuilder/state:/state -i -t qrencodebuilder
