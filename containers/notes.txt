@@ -1,0 +1,12 @@
+install docker
+./build emscripten-ubuntu
+./build emscripten-zlib
+./runzlib.sh
+./build emscripten-libpng
+./runlibpng
+./build emscripten-libqrencode
+./runlibqrencode
+
+you should have qrencode.js and qrencode.html in volume/bin
+
+edit qrencode.js, go to end of file and change run() to run(["-t", "SDL", "-o", "gary.png", prompt("what do you want in the code")]);
